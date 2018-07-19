@@ -10,8 +10,16 @@ jobs:
           name: Update Dependencies
           command: npm install
       - run:
-          name: Build the Angular App
-          command: ng build
-      - run:
-          name: Start the Angular App
-          command: ng serve
+         name: Deploy Master to Firebase
+         command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
+    workflows:
+      version: 2
+      -deploy:
+        jobs:
+          - build-job
+          - deploy-job:
+              requires:
+                - build-job
+              filters:
+                branches:
+                  only: master
