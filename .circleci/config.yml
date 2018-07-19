@@ -1,5 +1,5 @@
 version: 2
-build-job:
+jobs:
   build:
     working_directory: ~/my-site
     docker:
@@ -21,10 +21,10 @@ workflows:
   version: 2
   build-deploy:
     jobs:
-      - build-job
+      - jobs
       - deploy-job:
           requires:
-            - build-job
+            - jobs
           filters:
             branches:
               only: master
