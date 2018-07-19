@@ -6,8 +6,11 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Greeting
-          command: echo Hello, world.
+          name: Update Dependencies
+          command: npm install
       - run:
-          name: Print the Current Time
-          command: date
+          name: Build the Angular App
+          command: ng build
+      - run:
+          name: Start the Angular App
+          command: ng serve
