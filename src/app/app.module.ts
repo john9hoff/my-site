@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from "./material.module";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { ResumeComponent } from './resume/resume.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ResumeComponent,
+    ProjectsComponent,
   ],
   imports: [
     BrowserModule,

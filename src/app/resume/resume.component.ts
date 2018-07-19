@@ -9,8 +9,6 @@ export class ResumeComponent implements OnInit {
 
   constructor() { }
 
-  pdfSrc: string = '/resume.pdf';
-
   ngOnInit() {
   }
 
