@@ -1,8 +1,9 @@
 version: 2
 jobs:
   build:
+    working_directory: ~/my-site
     docker:
-      - image: debian:stretch
+      - image: circleci/node:6-browsers
     steps:
       - checkout
       - run:
