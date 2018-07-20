@@ -1,11 +1,13 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/my-site
     docker:
-      - image: circleci/node:6-browsers
+      - image: debian:stretch
     steps:
       - checkout
       - run:
-          name: Update Dependencies
-          command: npm install
+          name: Greeting
+          command: echo Hello, world.
+      - run:
+          name: Print the Current Time
+          command: date
