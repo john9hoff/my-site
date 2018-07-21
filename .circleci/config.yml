@@ -1,13 +1,11 @@
 version: 2
 jobs:
   build:
+    working_directory: ~/my-site
     docker:
       - image: debian:stretch
     steps:
       - checkout
       - run:
-          name: Unit Tests
-          command: ng test
-      - run:
-          name: Print the Current Time
-          command: date
+          name: Install Dependencies
+          command: npm install
