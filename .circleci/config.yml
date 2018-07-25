@@ -14,8 +14,3 @@ jobs:
       - run:
           name: Build App
           command: npm run-script build
-deployment:
-  production:
-    branch: master
-    commands:
-      - firebase deploy --token=$FIREBASE_TOKEN --non-interactive
