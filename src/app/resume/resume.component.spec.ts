@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ResumeComponent } from './resume.component';
+import { MatCardModule } from '@angular/material';
 
 describe('ResumeComponent', () => {
   let component: ResumeComponent;
@@ -8,6 +8,7 @@ describe('ResumeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ MatCardModule ],
       declarations: [ ResumeComponent ]
     })
     .compileComponents();
